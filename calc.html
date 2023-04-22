@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calc</title>
+  <style>
+    body {
+      font-family: 'Gotham Rounded', sans-serif;
+      font-weight: normal;
+      background-color: beige;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <form>
+    <input type="text" id="num1" placeholder="Enter number 1">
+    <input type="text" id="num2" placeholder="Enter number 2">
+    <br>
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="-" onclick="subtract()">
+    <input type="button" value="*" onclick="multiply()">
+    <input type="button" value="/" onclick="divide()">
+    <br>
+    <input type="button" value="Clear" onclick="clear()">
+  </form>
+  <br>
+  <input type="text" id="result" readonly>
+  
+  <script>
+    function add() {
+      let num1 = document.getElementById('num1').value;
+      let num2 = document.getElementById('num2').value;
+      let result = parseFloat(num1) + parseFloat(num2);
+      document.getElementById('result').value = result;
+    }
+    
+    function subtract() {
+      let num1 = document.getElementById('num1').value;
+      let num2 = document.getElementById('num2').value;
+      let result = parseFloat(num1) - parseFloat(num2);
+      document.getElementById('result').value = result;
+    }
+    
+    function multiply() {
+      let num1 = document.getElementById('num1').value;
+      let num2 = document.getElementById('num2').value;
+      let result = parseFloat(num1) * parseFloat(num2);
+      document.getElementById('result').value = result;
+    }
+    
+    function divide() {
+      let num1 = document.getElementById('num1').value;
+      let num2 = document.getElementById('num2').value;
+      let result = parseFloat(num1) / parseFloat(num2);
+      document.getElementById('result').value = result;
+    }
+    
+    function clear() {
+      document.getElementById('num1').value = '';
+      document.getElementById('num2').value = '';
+      document.getElementById('result').value = '';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NamuRiverLodge.com</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="lodge.css">
+</head>
+<body>
+	<header>
+		<h1>Namu River Lodge</h1>
+		<nav>
+			<ul>
+				<li><a href="book.html">Book</a></li>
+				<li><a href="rooms.html">Rooms</a></li>
+				<li><a href="activities.html">Activities</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<p>Welcome to the Namu River Lodge, a beautiful destination nestled in the heart of the African wilderness.
+            <br>
+            We offer luxurious accommodations, exciting activities, and unparalleled natural beauty.</p>
+            <br>
+            <br>
+			<h2>Login</h2>
+			<form action="login.php" method="post">
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required><br><br>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required><br><br>
+				<input type="submit" value="Login">
+			</form>
+            <br>
+            <section>
+                <button id="signupButton">Sign Up</button>
+                  <div id="signupModal" class="signupModal">
+                    <div class="signupModal-content">
+            <form action="signup.php" method="post">
+                <h2>Sign Up</h2>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <input type="submit" value="Sign Up">
+                <input type="button" value="Close">
+           </form>
+         </div>
+       </div>
+
+     <script>
+        var signupButton = document.getElementById("signupButton");
+        var signupModal = document.getElementById("signupModal");
+        var closeButton = document.querySelector(".signupModal-content input[type='button']");
+
+         signupButton.addEventListener("click", function() {
+         signupModal.style.display = "block";
+    });
+
+       closeButton.addEventListener("click", function() {
+       signupModal.style.display = "none";
+    });
+      </script>
+
+	<footer>
+		<p>&copy; 2023 Namu River Lodge</p>
+	</footer>
+</body>
+</html>
